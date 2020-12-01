@@ -9,5 +9,5 @@ Ansible must be installed on client wher the script will be run.
 
 ## Usage
 
-1. define your target servers in the hosts file  
+1. define your target servers in the `hosts` file  
 2. Run `ansible-playbook main.yml -i hosts`
