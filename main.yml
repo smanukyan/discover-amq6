@@ -1,0 +1,16 @@
+---
+
+- name: Discover AMQ Broker v6 Installations
+  hosts: servers
+  tasks:
+   - name: Search for the installation
+     find:
+      paths: /
+      patterns: 'activemq.xml'
+      recurse: yes
+     register: output
+
+   - name: Output first found file
+     debug: 
+      var: output.files[0].path
+     
